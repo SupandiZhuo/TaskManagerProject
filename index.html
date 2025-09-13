@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="taskContainer">
+        
+        <div class="headerContainer">
+          <h1>Task Manager</h1>
+        </div>
+
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search tasks..." />
+          <button onclick="searchTask()">Search</button>
+        </div>
+
+        <div class="tableContainer">
+          <table>
+            <tr class="bg-header">
+              <th>Task</th>
+              <th>Category</th>
+              <th>Deadline</th>
+              <th>Status</th>
+            </tr>
+            <tbody id="taskTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="buttonContainer">
+        <button onclick="showForm()" class="btn">Add Task</button>
+        <div id="popupTaskForm">
+          <form id="taskForm">
+            <input
+              type="text"
+              id="taskName"
+              placeholder="Input your name of task"
+            />
+
+            <select name="Task Category" id="taskCategory">
+              <option value="work">work</option>
+              <option value="personal">personal</option>
+              <option value="study">study</option>
+            </select>
+
+            <input type="datetime-local" id="taskDeadline" />
+
+            <button type="submit">Add Task</button>
+            <button type="button" onclick="hideForm()">Cancel</button>
+          </form>
+        </div>
+        <button class="btn">Delete Task</button>
+        <button class="btn">Edit Task</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fa;
+  font-family: "Poppins";
+}
+
+/* Main Container */
+.container {
+  display: block;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title application */
+.headerContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+
+.search-box {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #45a049;
+}
+
+/* Task Container */
+.taskContainer {
+  display: flex;
+  min-width: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* border: none; */
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border: none;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr{
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.btn {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  transition: 0.3;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+#popupTaskForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70vh;
+  transform: translate(-50%, -50%);
+  border: 2px solid #333;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
